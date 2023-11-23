@@ -23,3 +23,12 @@ app.UseAntiforgery();
 app.MapRazorComponents<App>();
 
 app.Run();
+
+
+public static class WebsiteKeys
+{
+    public const string GitHubRepo = "https://github.com/tesar-tech/blazorStaticMinimalBlog";
+    public const string Twitter = "https://twitter.com/";
+    public const string Title = "BlazorStatic Minimal Blog";
+    
+}
