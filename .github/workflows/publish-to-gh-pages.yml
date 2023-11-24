@@ -10,8 +10,10 @@ env:
   WEBAPP_CSPROJ: BlazorStaticMinimalBlog.csproj
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write 
     steps:
       - uses: actions/checkout@v3
 
