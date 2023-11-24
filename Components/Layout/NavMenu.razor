@@ -4,7 +4,7 @@
     <div>
         <a  href="/">
             <div class="flex items-center justify-between">
-                <div class=" h-6 text-2xl font-semibold sm:block text-violet-800">@WebsiteKeys.Title</div>
+                <div class=" h-6 text-2xl font-semibold sm:block text-primary-800">@WebsiteKeys.Title</div>
             </div>
         </a>
     </div>
@@ -12,7 +12,7 @@
         @foreach(var item in menuItems)
         {
             <NavLink ActiveClass="bg-primary-950 px-2 py-1 rounded-xl" class="hidden font-medium text-gray-100 sm:block" 
-                     Match="@(item.link==""?NavLinkMatch.All:NavLinkMatch.Prefix)" href="@item.link">@item.name</NavLink>
+                     Match="@(item.link==""?NavLinkMatch.All:NavLinkMatch.Prefix)" href="@item.link">@((MarkupString)item.name) </NavLink>
 
             @* <a class="hidden font-medium text-gray-100 sm:block   @(Nm.Uri.EndsWith(item.link)?"":"") " href="@item.link">@item.name</a> *@
         } 
@@ -33,8 +33,10 @@
                 @foreach (var item in menuItems)
                 {
                     <div class="px-12 py-4">
-                        <NavLink ActiveClass="underline" class="text-2xl font-bold tracking-widest text-gray-100" 
-                                             Match="@(item.link==""?NavLinkMatch.All:NavLinkMatch.Prefix)" href="@item.link">@item.name</NavLink>
+                        <NavLink ActiveClass="underline" class="text-2xl font-bold tracking-widest text-gray-100"
+                                 Match="@(item.link == "" ? NavLinkMatch.All : NavLinkMatch.Prefix)" href="@item.link">
+                            @((MarkupString)item.name)
+                        </NavLink>
                     </div>
                 }
             </nav>
@@ -57,6 +59,6 @@
     {
         ("Home", ""),
         ("Tags", "tags"),
-        ("Github",WebsiteKeys.GitHubRepo ),
+        ("Github  \u2b67",WebsiteKeys.GitHubRepo ),
     };
 }

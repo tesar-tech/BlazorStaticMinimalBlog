@@ -10,4 +10,10 @@
     <PackageReference Include="BlazorStatic" Version="1.0.0-beta.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Content/**/*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
