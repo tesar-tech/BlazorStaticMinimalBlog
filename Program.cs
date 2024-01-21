@@ -3,6 +3,8 @@ using BlazorStaticMinimalBlog.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseStaticWebAssets();
+
 builder.Services.AddBlazorStaticService(opt => {
     opt.IgnoredPathsOnContentCopy.Add("app.css");//pre-build version for tailwind
 }
