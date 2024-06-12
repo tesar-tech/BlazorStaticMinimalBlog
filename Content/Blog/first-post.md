@@ -6,7 +6,7 @@ tags: [tag-001, another-sample-tag]
 authors:
     - name: "Jan Tesař"
       gitHubUserName: "tesar-tech"
-      twitterUserName: "tesar-tech"
+      xUserName: "tesar_tech"
 ---
 
 Hi, this is a sample post with front matter (YAML) metadata. You can use Markdown to write your content.

@@ -37,7 +37,7 @@ app.Run();
 public static class WebsiteKeys
 {
     public const string GitHubRepo = "https://github.com/tesar-tech/blazorStaticMinimalBlog";
-    public const string Twitter = "https://twitter.com/";
+    public const string X = "https://x.com/";
     public const string Title = "BlazorStatic Minimal Blog";
     public const string BlogPostStorageAddress = $"{GitHubRepo}/tree/main/Content/Blog";
     public const string BlogLead = "Sample blog created with BlazorStatic and tailwindcss";

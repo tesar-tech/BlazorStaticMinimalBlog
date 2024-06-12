@@ -7,13 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BlazorStatic" Version="1.0.0-beta.4" />
+<!--    <PackageReference Include="BlazorStatic" Version="1.0.0-beta.7" />-->
   </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\src\BlazorStatic.csproj" />
+  </ItemGroup>
+  
+  
   <ItemGroup>
     <None Update="Content/**/*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+  
 
 </Project>
