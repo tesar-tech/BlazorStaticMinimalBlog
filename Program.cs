@@ -8,7 +8,7 @@ builder.WebHost.UseStaticWebAssets();
 builder.Services.AddBlazorStaticService(opt => {
     opt.IgnoredPathsOnContentCopy.Add("app.css");//pre-build version for tailwind
 }
-).AddBlogService<FrontMatter>();
+).AddBlazorStaticContentService<BlogFrontMatter>();
 
 builder.Services.AddRazorComponents();
 
@@ -29,7 +29,6 @@ app.UseAntiforgery();
 
 app.MapRazorComponents<App>();
 
-app.UseBlog<FrontMatter>();
 app.UseBlazorStaticGenerator(shutdownApp: !app.Environment.IsDevelopment());
 
 app.Run();
