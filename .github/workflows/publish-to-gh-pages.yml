@@ -30,7 +30,11 @@ jobs:
       - name: Change <base href="" /> in App.razor to match gh repo name
         run: |
           REPO_NAME=$(echo "${{ github.repository }}" | awk -F '/' '{print $NF}')
-          sed -i 's/<base href="\/" \/>/<base href="\/'$REPO_NAME'\/" \/>/g' ${{ env.WEBAPP_PATH }}Components/App.razor
+          USER_NAME=$(echo "${{ github.repository_owner }}")
+          if [ "$REPO_NAME" != "$USER_NAME.github.io" ]; then
+            sed -i 's/<base href="\/" \/>/<base href="\/'$REPO_NAME'\/" \/>/g' ${{ env.WEBAPP_PATH }}Components/App.razor
+          fi
+
       - run: touch ${{ env.WEBAPP_PATH }}/wwwroot/.nojekyll #folder starting with _ are handled as jekyll. This file will prevent that.  
       - name: Run webapp and generate static files
         run: |
