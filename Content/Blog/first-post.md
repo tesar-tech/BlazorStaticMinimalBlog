@@ -1,5 +1,5 @@
 ---
-title: Creating with Heart - A Introduction to Ethical Design 💖
+title: Creating with Heart - An Introduction to Ethical Design 💖
 lead: A short introduction to Ethical Design and how to incorporate it into your work flow
 published: 2024-03-09
 tags: [ethical-design]
@@ -8,7 +8,7 @@ authors:
       gitHubUserName: "korolanna"
 ---
 
-# Creating with Heart: A Introduction to Ethical Design 💖
+# Creating with Heart: An Introduction to Ethical Design 💖
 
 ## Introduction
 
