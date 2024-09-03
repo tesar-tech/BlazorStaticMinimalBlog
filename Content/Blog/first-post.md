@@ -1,12 +1,11 @@
 ---
-title: Creating with Heart: A Introduction to Ethical Design 💖
+title: Creating with Heart - A Introduction to Ethical Design 💖
 lead: A short introduction to Ethical Design and how to incorporate it into your work flow
 published: 2024-03-09
 tags: [ethical-design]
 authors:
     - name: "Anna Korol"
       gitHubUserName: "korolanna"
-      
 ---
 
 # Creating with Heart: A Introduction to Ethical Design 💖
@@ -31,7 +30,7 @@ To understand a bit more on the principles of Ethical Design, we can take a look
 
 *The Ethical Hierarchy of Needs, Aral Balkan and Laura Kalbag*
 
-When you want to ensure that your design or process is ethical and want to prevent a collapse, you can refer to this pyramid. This framework illustrates that, at its core, a user’s experience must abide by human rights. A common example of this pillar is when companies steal user data. If a design already fails this first pillar...BOOM...collapse. *Back to the ethical drawing board and let’s try that again.*
+When you want to ensure that your design or process is *ethical* and want to prevent a collapse, you can refer to this pyramid. This framework illustrates that, at its core, a user’s experience must abide by human rights. A common example of this pillar is when companies steal user data. If a design already fails this first pillar...BOOM...collapse. *Back to the ethical drawing board and let’s try that again.*
 
 If you made it past the first pillar and established that the design or process meets human rights, then you need to analyze whether it is functional and reliant to pass the second pillar.
 
