@@ -15,7 +15,7 @@ jobs:
     permissions:
       contents: write 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Remove launchSettings.json (to not override ASPNETCORE_ENVIRONMENT)
         run: rm  ${{ env.WEBAPP_PATH }}Properties/launchSettings.json
@@ -27,13 +27,13 @@ jobs:
           cd ${{ env.WEBAPP_PATH }}
           tailwindcss --input ./wwwroot/app.css  --output ./wwwroot/app.min.css  --minify
     
-      - name: Change <base href="" /> in App.razor to match gh repo name
+      - name: Change <base href="" /> in App.razor to match GitHub repo name
         run: |
           REPO_NAME=$(echo "${{ github.repository }}" | awk -F '/' '{print $NF}')
-          USER_NAME=$(echo "${{ github.repository_owner }}")
-          if [ "$REPO_NAME" != "$USER_NAME.github.io" ]; then
-            sed -i 's/<base href="\/" \/>/<base href="\/'$REPO_NAME'\/" \/>/g' ${{ env.WEBAPP_PATH }}Components/App.razor
+          if [[ "$REPO_NAME" != *.github.io ]]; then
+            sed -i 's|<base href="/" />|<base href="/'$REPO_NAME'/" />|g' ${{ env.WEBAPP_PATH }}/Components/App.razor
           fi
+
 
       - run: touch ${{ env.WEBAPP_PATH }}/wwwroot/.nojekyll #folder starting with _ are handled as jekyll. This file will prevent that.  
       - name: Run webapp and generate static files
