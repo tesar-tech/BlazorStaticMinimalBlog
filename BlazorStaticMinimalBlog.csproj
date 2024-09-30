@@ -20,6 +20,12 @@
     </None>
   </ItemGroup>
 
+
+<!-- to make hot reload work on .md files -->
+   <ItemGroup>
+    <Watch Include="Content/**/*" />
+  </ItemGroup>
+
   
 
 </Project>
