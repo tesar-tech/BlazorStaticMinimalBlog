@@ -5,7 +5,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-    <link rel="stylesheet" href="app.min.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+
+                    colors: {
+                        primary: tailwind.colors.violet
+                    },
+                },},
+                }
+    </script>
+    
+    
     <HeadOutlet />
 </head>
 
