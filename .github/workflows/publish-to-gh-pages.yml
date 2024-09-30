@@ -27,12 +27,13 @@ jobs:
             sed -i 's|<base href="/" />|<base href="/'$REPO_NAME'/" />|g' ${{ env.WEBAPP_PATH }}/Components/App.razor
           fi
 
-      - run: touch ${{ env.WEBAPP_PATH }}/wwwroot/.nojekyll #folder starting with _ are handled as jekyll. This file will prevent that.  
-     
-      - name: Run webapp and generate static files
-        run: |
+          
+          - name: Run webapp and generate static files
+          run: |
           dotnet run --project ${{ env.WEBAPP_PATH }}${{env.WEBAPP_CSPROJ}}  --configuration Release
-
+          
+      - run: touch ${{ env.WEBAPP_PATH }}/output/.nojekyll #folder starting with _ are handled as jekyll. This file will prevent that.  
+          
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
