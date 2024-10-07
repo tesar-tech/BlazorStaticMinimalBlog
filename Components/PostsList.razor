@@ -55,7 +55,7 @@
     [Parameter] public List<Post<BlogFrontMatter>>? Posts { get; set; }
     protected override void OnInitialized()
     {
-        posts = Posts != null ? Posts.OrderBy(x => x.FrontMatter.Published).ToList() : blazorStaticContentService.BlogPosts;
+        posts = Posts != null ? Posts.OrderBy(x => x.FrontMatter.Published).ToList() : blazorStaticContentService.Posts;
         base.OnInitialized();
     }
 }

@@ -10,7 +10,7 @@
     <PropertyGroup>
         <!-- Serve for Conditional logic for template instantiation -->
         <!-- You can put the version inside the PackageReference -->
-        <BlazorStaticVersion>1.0.0-beta.12</BlazorStaticVersion>
+        <BlazorStaticVersion>1.0.0-beta.13</BlazorStaticVersion>
     </PropertyGroup>
 
     <!--#if (UseInTemplate)-->
