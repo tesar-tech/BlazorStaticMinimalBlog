@@ -6,29 +6,9 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
-
-    <PropertyGroup>
-        <!-- Serve for Conditional logic for template instantiation -->
-        <!-- You can put the version inside the PackageReference -->
-        <BlazorStaticVersion>1.0.0-beta.13</BlazorStaticVersion>
-    </PropertyGroup>
-
-    <!--#if (UseInTemplate)-->
-    <ItemGroup>
-        <PackageReference Include="BlazorStatic" Version="$(BlazorStaticVersion)"/>
+    <ItemGroup >
+        <PackageReference Include="BlazorStatic" Version="1.0.0-beta.13"/>
     </ItemGroup>
-    <!--#else-->
-    <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-        <!-- for debugging when running from BlazorStaticWebsite.sln-->
-        <ProjectReference Include="../../../../src/BlazorStatic.csproj"/>
-    </ItemGroup>
-  
-    <ItemGroup Condition="'$(Configuration)' == 'Release'">
-        <!--When building the page on ci/cd-->
-        <PackageReference Include="BlazorStatic" Version="$(BlazorStaticVersion)"/>
-    </ItemGroup>
-    <!--#endif-->
-
 
     <ItemGroup>
         <None Update="Content/**/*">
