@@ -15,7 +15,7 @@ builder.Services.AddRazorComponents();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if(!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
@@ -40,5 +40,4 @@ public static class WebsiteKeys
     public const string Title = "BlazorStatic Minimal Blog";
     public const string BlogPostStorageAddress = $"{GitHubRepo}/tree/main/Content/Blog";
     public const string BlogLead = "Sample blog created with BlazorStatic and TailwindCSS";
-
 }
